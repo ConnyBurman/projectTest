@@ -1,0 +1,45 @@
+{
+  "ProjectName": "Smutt Template",
+  "ProjectGuid": "1476e6f4-3168-4cf2-b6bd-3b3d7450627e",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.SmuttTemplate",
+  "DisplayName": "Smutt Template",
+  "Author": "",
+  "Description": "Smutt Template",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "6.4.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{3de3fca7-7bba-48ea-a300-39f197ebf319}",
+  "WP8ProductID": "{6b2defa6-46b0-40b3-899b-d64a6c9f586a}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.SmuttTemplate",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
