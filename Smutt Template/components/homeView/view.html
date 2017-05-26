@@ -1,4 +1,4 @@
-<div data-role="view" data-title="View" data-layout="main" data-model="app.homeView" data-show="app.homeView.onShow" data-after-show="app.homeView.afterShow" id="homeViewScreen" class="screen">
+<div data-role="view" data-stretch="true" data-hide="app.homeView.onHide" data-title="View" data-layout="main" data-model="app.homeView" data-show="app.homeView.onShow" data-after-show="app.homeView.afterShow" id="homeViewScreen" class="screen">
     <header data-role="header">
         <div data-role="navbar" class="header-text">
 
@@ -6,7 +6,7 @@
 
             <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
 
-        </div>
+            <a data-role="button" data-align="right" data-bind="events: { click: homeViewModel.addClick }">Add</a></div>
     </header>
 
 
@@ -14,4 +14,32 @@
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <h1 data-bind="html: title"></h1>
     <!-- END_CUSTOM_CODE_homeView -->
+    <div id="homeViewModelMap" class="map">
+
+
+    </div>
+
+    <div class="map-details details-content screen__content screen__content--details screen__content--map" data-bind="click: homeViewModel.itemClick, visible: homeViewModel.itemDetailsVisible">
+        <h3 data-bind="text: homeViewModel.originalItem.Headline"></h3>
+
+        <p class="itemDetailsDescr">
+            <span data-bind="text:  homeViewModel.originalItem.Description"></span>
+        </p>
+
+    </div>
+
+
+    <!-- START_CUSTOM_CODE_homeViewModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_homeViewModel -->
+    <script type="text/x-kendo-template" id="homeViewModelTemplate">
+        <div class="image-with-text image-on-left">
+            # data = app.homeView.homeViewModel.fixHierarchicalData(data); #
+
+            <img src="#: data['Image1Url'] #">
+            <h3>#: data['Headline'] #</h3>
+            <p>#: data['Description'] #</p>
+        </div>
+    </script>
 </div>

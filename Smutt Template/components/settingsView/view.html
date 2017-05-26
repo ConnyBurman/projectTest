@@ -1,4 +1,133 @@
 <div data-role="view" data-title="View" data-layout="main" data-model="app.settingsView" data-show="app.settingsView.onShow" data-after-show="app.settingsView.afterShow" id="settingsViewScreen" class="screen">
+    <div id="settingsViewModel" class="form-view screen__content screen__content--form add-item-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+                    <div id="headingField" class="field field--heading">
+                        <h4>Ange sökord</h4>
+                    </div>
+                </li>
+                <li class="form-content-item">
+                    <label id="textBlockField" class="km-label-above field field--text-block">
+
+
+                        <div class="textBlock field__content">För att andra ska kunna hitta dig och dina annonser på ett snabbt och smidigt sätt så kan du ange sökord som gör att du dyker upp i andras sökningar.</div>
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="tagOneField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.tagOne.title"></span>
+
+
+                        <input id="tagOne" data-bind="value: addFormData.tagOne, attr: { placeholder: strings.settingsView.settingsViewModel.editableListForm21.tagOne.placeholder }" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="tagTwoField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.tagTwo.title"></span>
+
+
+                        <input id="tagTwo" data-bind="value: addFormData.tagTwo, attr: { placeholder: strings.settingsView.settingsViewModel.editableListForm21.tagTwo.placeholder }" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="tagThreeField" class="field km-listview-label field--text">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.tagThree.title"></span>
+
+
+                        <input id="tagThree" data-bind="value: addFormData.tagThree, attr: { placeholder: strings.settingsView.settingsViewModel.editableListForm21.tagThree.placeholder }" type="text">
+
+                    </label>
+                </li>
+                <li class="group-separator">
+                    <h4 class="group-separator-header" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.groupSettings.title"></h4>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="allowShowEmailField" class="field km-listview-label field--switch">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.allowShowEmail.title"></span>
+
+
+                        <input id="allowShowEmail" data-bind="value: addFormData.allowShowEmail" data-role="switch" type="switch">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="allowShowPhoneField" class="field km-listview-label field--switch">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.allowShowPhone.title"></span>
+
+
+                        <input id="allowShowPhone" data-bind="value: addFormData.allowShowPhone" data-role="switch" type="switch">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="allowShowCurrentLocationField" class="field km-listview-label field--switch">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.allowShowCurrentLocation.title"></span>
+
+
+                        <input id="allowShowCurrentLocation" data-bind="value: addFormData.allowShowCurrentLocation" data-role="switch" type="switch">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="allowPushField" class="field km-listview-label field--switch">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.allowPush.title"></span>
+
+
+                        <input id="allowPush" data-bind="value: addFormData.allowPush" data-role="switch" type="switch">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="allowShowLatestActivityField" class="field km-listview-label field--switch">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.allowShowLatestActivity.title"></span>
+
+
+                        <input id="allowShowLatestActivity" data-bind="value: addFormData.allowShowLatestActivity" data-role="switch" type="switch">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="allowSnapserviceEmailField" class="field km-listview-label field--switch">
+                        <span class="field__label" data-bind="text: strings.settingsView.settingsViewModel.editableListForm21.allowSnapserviceEmail.title"></span>
+
+
+                        <input id="allowSnapserviceEmail" data-bind="value: addFormData.allowSnapserviceEmail" data-role="switch" type="switch">
+
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a class="primary" data-role="button" data-bind="events: { click: settingsViewModel.submit }, buttonText: strings.settingsView.settingsViewModel.submitButton"></a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_settingsViewModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_settingsViewModel -->
+    </div>
     <header data-role="header">
         <div data-role="navbar" class="header-text">
 

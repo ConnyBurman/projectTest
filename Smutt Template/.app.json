@@ -4,16 +4,334 @@
     {
       "type": "kendo-ui-mobile:view",
       "name": "homeView",
-      "components": [],
-      "title": "Home View",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "location",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Location",
+                  "inputType": "location",
+                  "titlePosition": "left",
+                  "dataBinding": "AcceptedBid",
+                  "locationDisplayType": "distance"
+                }
+              ],
+              "name": "editableListForm3",
+              "formType": "detail"
+            },
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "headline",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Rubrik",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "text",
+                  "placeholder": "Max 22 tecken",
+                  "dataBinding": "Headline"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "description",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Beskrivning",
+                  "inputType": "textArea",
+                  "wideFieldTitlePosition": "top",
+                  "dataBinding": "Description"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "fileUpload",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Bifoga bild",
+                  "inputType": "fileUpload",
+                  "titlePosition": "top",
+                  "fileUploadPlaceholder": "Välj bild..",
+                  "dataBinding": "Image1"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "locationOnline",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Ingen specifik plats / Online",
+                  "inputType": "radio",
+                  "group": "group1",
+                  "radioValue": "locationOnline",
+                  "dataBinding": "Online"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "timeFixedStart",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Uppdragets starttid",
+                  "inputType": "date",
+                  "titlePosition": "top",
+                  "inputDateType": "datetime-local",
+                  "dataBinding": "TimeFixedStart"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "timeFixedStop",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Uppdragets deadline",
+                  "inputType": "date",
+                  "titlePosition": "top",
+                  "inputDateType": "datetime-local",
+                  "dataBinding": "TimeFixedStop"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "locationTest",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "LocationTest",
+                  "inputType": "location",
+                  "titlePosition": "top",
+                  "dataBinding": "LocationStart",
+                  "locationDisplayType": "map",
+                  "locationApiKey": "pk.eyJ1IjoiMjAxNGlkMDAwMSIsImEiOiJjajM1ZjdrZmcwMDU4MzJzMjVwMWZmdGZ2In0.wQ32HhFCoCqbimWXU1x0wA"
+                }
+              ],
+              "name": "editableListForm4",
+              "formType": "add"
+            }
+          ],
+          "name": "homeViewModel",
+          "dataProvider": "backendServices",
+          "collection": "Missions",
+          "headerField": "Headline",
+          "group": "Headline",
+          "filterField": "Description",
+          "addItemForm": true,
+          "addScreenHeaderValue": "Create",
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "listLayout": "multilineImage",
+          "subHeaderField": "Description",
+          "imageField": "Image1",
+          "imagePosition": "left",
+          "hasSeparator": true,
+          "pullToRefresh": true,
+          "endlessScroll": true,
+          "isMapView": true,
+          "mapApiKey": "pk.eyJ1IjoiMjAxNGlkMDAwMSIsImEiOiJjajM1ZjdrZmcwMDU4MzJzMjVwMWZmdGZ2In0.wQ32HhFCoCqbimWXU1x0wA",
+          "geoPointField": "Description",
+          "serverSideSorting": true,
+          "serverSideSortingField": "CreatedAt",
+          "serverSideSortingDirection": "asc",
+          "serverSidePaging": true,
+          "serverSidePagingSize": 25,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Annonser",
+          "detailSubHeaderField": "Description",
+          "detailDescriptionField": "Description",
+          "detailImageField": "Description"
+        }
+      ],
+      "title": "Annonser",
       "addToNavigation": true,
-      "icon": "home"
+      "icon": "organize"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "adsMapView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "addScreenExtraFields": [],
+          "editScreenExtraFields": [],
+          "components": [],
+          "name": "adsMapViewModel",
+          "dataProvider": "backendServices",
+          "collection": "Missions",
+          "headerField": "LocationStart",
+          "iconField": true,
+          "addItemForm": false,
+          "editItemForm": false,
+          "deleteItemButton": false,
+          "listLayout": "list",
+          "hasSeparator": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "isMapView": true,
+          "mapApiKey": "pk.eyJ1IjoiMjAxNGlkMDAwMSIsImEiOiJjajM1ZjdrZmcwMDU4MzJzMjVwMWZmdGZ2In0.wQ32HhFCoCqbimWXU1x0wA",
+          "geoPointField": "Description",
+          "serverSideSorting": false,
+          "serverSidePaging": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail",
+          "detailSubHeaderField": "Headline",
+          "detailDescriptionField": "Description",
+          "detailImageField": "Image1"
+        }
+      ],
+      "title": "Annonser Karta",
+      "addToNavigation": true,
+      "icon": "globe"
     },
     {
       "type": "kendo-ui-mobile:view",
       "name": "settingsView",
-      "components": [],
-      "title": "Settings",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "heading",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Heading",
+                  "inputType": "heading",
+                  "headingSize": "h4",
+                  "value": "Ange sökord"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "textBlock",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Information",
+                  "inputType": "textBlock",
+                  "wideFieldTitlePosition": "hidden",
+                  "value": "För att andra ska kunna hitta dig och dina annonser på ett snabbt och smidigt sätt så kan du ange sökord som gör att du dyker upp i andras sökningar."
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "tagOne",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "#1",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "TagOne"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "tagTwo",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "#2",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "TagTwo"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "tagThree",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "#3",
+                  "inputType": "text",
+                  "titlePosition": "left",
+                  "inputTextType": "text",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "TagThree"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "groupSettings",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Övriga inställningar",
+                  "inputType": "group-separator"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "allowShowEmail",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Visa min mailadress för andra",
+                  "inputType": "switch",
+                  "dataBinding": "AllowShowEmail"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "allowShowPhone",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Visa mitt telefonnummer",
+                  "inputType": "switch",
+                  "dataBinding": "AllowShowPhone"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "allowShowCurrentLocation",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Visa min befintliga position",
+                  "inputType": "switch",
+                  "dataBinding": "AllowShowCurrentLocation"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "allowPush",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Tillåt pushnotifieringar",
+                  "inputType": "switch",
+                  "dataBinding": "AllowPush"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "allowShowLatestActivity",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Visa min senaste aktivitet",
+                  "inputType": "switch",
+                  "dataBinding": "AllowShowLatestActivity"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "allowSnapserviceEmail",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Tillåt mail från Snapservice",
+                  "inputType": "switch",
+                  "dataBinding": "AllowSnapserviceEmail"
+                }
+              ],
+              "name": "editableListForm21",
+              "formType": "add"
+            }
+          ],
+          "name": "settingsViewModel",
+          "enableDataBinding": true,
+          "dataProvider": "backendServices",
+          "collection": "Settings",
+          "submitButton": "Confirm"
+        }
+      ],
+      "title": "Inställningar",
       "addToNavigation": true,
       "icon": "settings"
     },
@@ -24,14 +342,105 @@
       "title": "Contacts",
       "addToNavigation": true,
       "icon": "contacts"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "myAccountView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:editableListForm",
+              "components": [
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "email",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Email",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "email",
+                  "placeholder": "Skriv här..",
+                  "dataBinding": "Email"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "password",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "Lösenord",
+                  "inputType": "text",
+                  "titlePosition": "top",
+                  "inputTextType": "password",
+                  "placeholder": "Type here ...",
+                  "dataBinding": "PasswordSalt"
+                },
+                {
+                  "type": "kendo-ui-mobile:editableListFormField",
+                  "name": "groupLogin",
+                  "dataBindingRelationChildren": "[]",
+                  "dataBindingMultipleSelectChildren": "[]",
+                  "title": "eller logga in med",
+                  "inputType": "group-separator"
+                }
+              ],
+              "name": "editableListForm29",
+              "formType": "add"
+            }
+          ],
+          "name": "myAccountViewModel",
+          "enableDataBinding": true,
+          "dataProvider": "backendServices",
+          "collection": "Users",
+          "submitButton": "Logga in",
+          "cancelButton": "Skapa konto"
+        }
+      ],
+      "title": "My Account",
+      "addToNavigation": true,
+      "icon": "contacts"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "aboutView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:about",
+          "name": "aboutViewModel",
+          "appName": "snapservice",
+          "appVersion": "Version 1",
+          "appIcon": "Runner 1024x1024.png",
+          "appDescription": "En marknadsplats för tjänster där efterfrågan kan vara vad som helst och tillfredsställas av vem som helst!\n\nsnapservice skapades för att möjliggöra mötet mellan den som behöver något och den som har de rätta förutsättningarna för en lösning.",
+          "contactButton": true,
+          "contactLabel": "Kontakta oss",
+          "contactMail": "support@mysnapservice.com",
+          "facebookButton": true,
+          "facebookLabel": "Gilla oss på Facebook",
+          "facebookLink": "https://www.facebook.com/mysnapservice",
+          "twitterButton": false
+        }
+      ],
+      "title": "Om snapservice",
+      "addToNavigation": false
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "backendServices",
+      "source": "everlive",
+      "everliveKey": "rwh54no2msgp0a56",
+      "offlineStorage": false,
+      "title": "Backend Services"
+    }
+  ],
   "name": "kendoUiMobileApp",
   "navigation": "drawer",
   "view": "homeView",
   "skin": "nova",
-  "skinMainColor": "#32364c",
+  "skinMainColor": "#047591",
   "skinTextColor": "#ffffff",
-  "skinAccentColor": "#ff4350"
+  "skinAccentColor": "#ffffff"
 }

@@ -1,17 +1,15 @@
 'use strict';
 
-app.settingsView = kendo.observable({
+app.myAccountView = kendo.observable({
     onShow: function() {},
     afterShow: function() {}
 });
-app.localization.registerView('settingsView');
+app.localization.registerView('myAccountView');
 
-// START_CUSTOM_CODE_settingsView
+// START_CUSTOM_CODE_myAccountView
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
-(function() {
-    app.settingsView.set('title', 'Settings');
-})();
-// END_CUSTOM_CODE_settingsView
+
+// END_CUSTOM_CODE_myAccountView
 (function(parent) {
     var
     /// start global model properties
@@ -20,7 +18,7 @@ app.localization.registerView('settingsView');
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'Settings',
+                typeName: 'Users',
                 dataProvider: dataProvider
             },
             error: function(e) {
@@ -29,7 +27,7 @@ app.localization.registerView('settingsView');
                 }
             }
         },
-        settingsViewModel = kendo.observable({
+        myAccountViewModel = kendo.observable({
             submit: function() {
                 var addFormData = parent.get('addFormData'),
                     addModel = {};
@@ -38,15 +36,8 @@ app.localization.registerView('settingsView');
 
                 function saveModel(data) {
                     /// start add form data save
-                    addModel.AllowSnapserviceEmail = addFormData.allowSnapserviceEmail;
-                    addModel.AllowShowLatestActivity = addFormData.allowShowLatestActivity;
-                    addModel.AllowPush = addFormData.allowPush;
-                    addModel.AllowShowCurrentLocation = addFormData.allowShowCurrentLocation;
-                    addModel.AllowShowPhone = addFormData.allowShowPhone;
-                    addModel.AllowShowEmail = addFormData.allowShowEmail;
-                    addModel.TagThree = addFormData.tagThree;
-                    addModel.TagTwo = addFormData.tagTwo;
-                    addModel.TagOne = addFormData.tagOne;
+                    addModel.PasswordSalt = addFormData.password;
+                    addModel.Email = addFormData.email;
                     /// end add form data save
                     var dataSource = new kendo.data.DataSource(dataSourceOptions);
                     dataSource.add(addModel);
@@ -77,8 +68,12 @@ app.localization.registerView('settingsView');
             /// start add model functions
             /// end add model functions
 
-            /// start add model properties
-            /// end add model properties
+            cancel: function() {
+                    /// start add model cancel
+                    /// end add model cancel
+                }
+                /// start add model properties
+                /// end add model properties
 
         });
 
@@ -88,26 +83,18 @@ app.localization.registerView('settingsView');
     parent.set('onShow', function _onShow() {
         var that = parent;
         that.set('addFormData', {
-            allowSnapserviceEmail: '',
-            allowShowLatestActivity: '',
-            allowPush: '',
-            allowShowCurrentLocation: '',
-            allowShowPhone: '',
-            allowShowEmail: '',
-            tagThree: '',
-            tagTwo: '',
-            tagOne: '',
-            heading: 'Ange sökord',
+            password: '',
+            email: '',
             /// start add form data init
             /// end add form data init
         });
         /// start add form show
         /// end add form show
     });
-    parent.set('settingsViewModel', settingsViewModel);
-})(app.settingsView);
+    parent.set('myAccountViewModel', myAccountViewModel);
+})(app.myAccountView);
 
-// START_CUSTOM_CODE_settingsViewModel
+// START_CUSTOM_CODE_myAccountViewModel
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
 
-// END_CUSTOM_CODE_settingsViewModel
+// END_CUSTOM_CODE_myAccountViewModel

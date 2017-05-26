@@ -1,0 +1,104 @@
+<div data-role="view" data-title="Add" data-model="app.homeView.addItemViewModel" data-bind="events: { show: onShow }" id="homeViewModelAddScreen" class="screen screen--add add-item-view">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span data-bind="text: strings.homeView.homeViewModel.addScreenHeaderValue"></span>
+            <a data-role="backbutton" data-align="left" data-bind="events: { click: onCancel }">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_homeViewModel -->
+    <!-- END_CUSTOM_CODE_homeViewModel -->
+    <div id="editableListForm4" class="form-view screen__content screen__content--form">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="headlineField" class="field km-listview-label field--text km-label-above">
+                        <span class="field__label" data-bind="text: strings.homeView.homeViewModel.editableListForm4.headline.title"></span>
+
+
+                        <input id="headline" data-bind="value: addFormData.headline, attr: { placeholder: strings.homeView.homeViewModel.editableListForm4.headline.placeholder }" type="text">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+                    <label id="descriptionField" class="km-label-above field field--textarea">
+
+                        <span class="field__label" data-bind="text: strings.homeView.homeViewModel.editableListForm4.description.title"></span>
+
+                        <textarea rows="7" data-bind="value: addFormData.description"></textarea>
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <div id="fileUploadField" class="field field--file-upload editableListItem fileUploadListItem km-label-above">
+
+                        <div class="field__label" data-bind="text: strings.homeView.homeViewModel.editableListForm4.fileUpload.title"></div>
+
+                        <div class="field__content">
+                            <span id="fileUploadName" class="file-upload-name field__content-info"></span>
+                            <a href="javascript:void(0)" class="link" data-bind="text: strings.homeView.homeViewModel.editableListForm4.fileUpload.fileUploadPlaceholder"></a>
+                            <input id="fileUpload" type="file">
+                        </div>
+                    </div>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="locationOnlineField" class="field km-listview-label field--radio">
+                        <span class="field__label" data-bind="text: strings.homeView.homeViewModel.editableListForm4.locationOnline.title"></span>
+
+
+                        <input id="locationOnline" data-bind="checked: addFormData.locationOnline" name="group1" type="radio" value="locationOnline">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="timeFixedStartField" class="field km-listview-label field--datetime-local km-label-above">
+                        <span class="field__label" data-bind="text: strings.homeView.homeViewModel.editableListForm4.timeFixedStart.title"></span>
+
+
+                        <input id="timeFixedStart" data-bind="value: addFormData.timeFixedStart" type="datetime-local">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="timeFixedStopField" class="field km-listview-label field--datetime-local km-label-above">
+                        <span class="field__label" data-bind="text: strings.homeView.homeViewModel.editableListForm4.timeFixedStop.title"></span>
+
+
+                        <input id="timeFixedStop" data-bind="value: addFormData.timeFixedStop" type="datetime-local">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <div id="locationTestField" class="field field--location imageListItem km-label-above">
+
+                        <div class="field__label" data-bind="text: strings.homeView.homeViewModel.editableListForm4.locationTest.title"></div>
+
+                        <div class="field__content">
+
+                            <div id="locationTest" class="mapView"></div>
+
+                            <div>
+                                <a id="locationTest-link" href="javascript:void(0)" data-bind="events {click: editLocation}">Edit</a> /
+                                <a id="locationTest-link" href="javascript:void(0)" data-bind="events {click: useCurrentLocation}">Use current</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        <!-- START_CUSTOM_CODE_editableListForm4 -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+        <!-- END_CUSTOM_CODE_editableListForm4 -->
+    </div>
+</div>

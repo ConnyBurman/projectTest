@@ -5,12 +5,126 @@
     "qrCodeScan": "Scan"
   },
   "homeView": {
-    "title": "Home View"
+    "title": "Annonser",
+    "homeViewModel": {
+      "detailHeaderFieldValue": "Annonser",
+      "addScreenHeaderValue": "Create",
+      "editableListForm3": {
+        "location": {
+          "title": "Location"
+        }
+      },
+      "editableListForm4": {
+        "headline": {
+          "title": "Rubrik",
+          "placeholder": "Max 22 tecken"
+        },
+        "description": {
+          "title": "Beskrivning"
+        },
+        "fileUpload": {
+          "title": "Bifoga bild",
+          "fileUploadPlaceholder": "Välj bild.."
+        },
+        "locationOnline": {
+          "title": "Ingen specifik plats / Online"
+        },
+        "timeFixedStart": {
+          "title": "Uppdragets starttid"
+        },
+        "timeFixedStop": {
+          "title": "Uppdragets deadline"
+        },
+        "locationTest": {
+          "title": "LocationTest"
+        }
+      }
+    }
+  },
+  "adsMapView": {
+    "title": "Annonser Karta",
+    "adsMapViewModel": {
+      "detailHeaderFieldValue": "Detail"
+    }
   },
   "settingsView": {
-    "title": "Settings"
+    "title": "Inställningar",
+    "settingsViewModel": {
+      "submitButton": "Confirm",
+      "editableListForm21": {
+        "heading": {
+          "title": "Heading"
+        },
+        "textBlock": {
+          "title": "Information"
+        },
+        "tagOne": {
+          "title": "#1",
+          "placeholder": "Type here ..."
+        },
+        "tagTwo": {
+          "title": "#2",
+          "placeholder": "Type here ..."
+        },
+        "tagThree": {
+          "title": "#3",
+          "placeholder": "Type here ..."
+        },
+        "groupSettings": {
+          "title": "Övriga inställningar"
+        },
+        "allowShowEmail": {
+          "title": "Visa min mailadress för andra"
+        },
+        "allowShowPhone": {
+          "title": "Visa mitt telefonnummer"
+        },
+        "allowShowCurrentLocation": {
+          "title": "Visa min befintliga position"
+        },
+        "allowPush": {
+          "title": "Tillåt pushnotifieringar"
+        },
+        "allowShowLatestActivity": {
+          "title": "Visa min senaste aktivitet"
+        },
+        "allowSnapserviceEmail": {
+          "title": "Tillåt mail från Snapservice"
+        }
+      }
+    }
   },
   "contactsView": {
     "title": "Contacts"
+  },
+  "myAccountView": {
+    "title": "My Account",
+    "myAccountViewModel": {
+      "submitButton": "Logga in",
+      "cancelButton": "Skapa konto",
+      "editableListForm29": {
+        "email": {
+          "title": "Email",
+          "placeholder": "Skriv här.."
+        },
+        "password": {
+          "title": "Lösenord",
+          "placeholder": "Type here ..."
+        },
+        "groupLogin": {
+          "title": "eller logga in med"
+        }
+      }
+    }
+  },
+  "aboutView": {
+    "title": "Om snapservice",
+    "aboutViewModel": {
+      "appName": "snapservice",
+      "appVersion": "Version 1",
+      "appDescription": "En marknadsplats för tjänster där efterfrågan kan vara vad som helst och tillfredsställas av vem som helst!\n\nsnapservice skapades för att möjliggöra mötet mellan den som behöver något och den som har de rätta förutsättningarna för en lösning.",
+      "contactLabel": "Kontakta oss",
+      "facebookLabel": "Gilla oss på Facebook"
+    }
   }
 }

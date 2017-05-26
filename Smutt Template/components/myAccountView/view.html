@@ -1,0 +1,57 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.myAccountView" data-show="app.myAccountView.onShow" data-after-show="app.myAccountView.afterShow" id="myAccountViewScreen" class="screen">
+    <div id="myAccountViewModel" class="form-view screen__content screen__content--form add-item-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label id="emailField" class="field km-listview-label field--email km-label-above">
+                        <span class="field__label" data-bind="text: strings.myAccountView.myAccountViewModel.editableListForm29.email.title"></span>
+
+
+                        <input id="email" data-bind="value: addFormData.email, attr: { placeholder: strings.myAccountView.myAccountViewModel.editableListForm29.email.placeholder }" type="email">
+
+                    </label>
+                </li>
+                <li class="form-content-item">
+
+
+                    <label id="passwordField" class="field km-listview-label field--password km-label-above">
+                        <span class="field__label" data-bind="text: strings.myAccountView.myAccountViewModel.editableListForm29.password.title"></span>
+
+
+                        <input id="password" data-bind="value: addFormData.password, attr: { placeholder: strings.myAccountView.myAccountViewModel.editableListForm29.password.placeholder }" type="password">
+
+                    </label>
+                </li>
+                <li class="group-separator">
+                    <h4 class="group-separator-header" data-bind="text: strings.myAccountView.myAccountViewModel.editableListForm29.groupLogin.title"></h4>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: myAccountViewModel.cancel }, buttonText: strings.myAccountView.myAccountViewModel.cancelButton"></a>
+                <a class="primary" data-role="button" data-bind="events: { click: myAccountViewModel.submit }, buttonText: strings.myAccountView.myAccountViewModel.submitButton"></a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_myAccountViewModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_myAccountViewModel -->
+    </div>
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.myAccountView.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_myAccountView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_myAccountView -->
+</div>

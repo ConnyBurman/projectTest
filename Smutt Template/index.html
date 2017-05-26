@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <script src="bower_components/leaflet/dist/leaflet.js"></script>
+    <link href="bower_components/leaflet/dist/leaflet.css" rel="stylesheet">
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
@@ -14,11 +16,16 @@
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="app.js"></script>
+    <script src="bower_components/everlive/min/everlive.all.min.js"></script>
+    <script src="dataProviders/backendServices.js"></script>
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/aboutView/index.js"></script>
+    <script src="components/myAccountView/index.js"></script>
     <script src="components/contactsView/index.js"></script>
     <script src="components/settingsView/index.js"></script>
+    <script src="components/adsMapView/index.js"></script>
     <script src="components/homeView/index.js"></script>
     <div data-role="layout" data-id="main">
         <header data-role="header">
@@ -44,10 +51,15 @@
             </div>
         </header>
         <ul id="navigation-container" data-role="listview">
-            <li><a href="components/homeView/view.html" data-icon="home"><span class="navigation-link-text" data-bind="text: strings.homeView.title"></span></a></li>
+            <li><a href="components/homeView/view.html" data-icon="organize"><span class="navigation-link-text" data-bind="text: strings.homeView.title"></span></a></li>
+            <li><a href="components/adsMapView/view.html" data-icon="globe"><span class="navigation-link-text" data-bind="text: strings.adsMapView.title"></span></a></li>
             <li><a href="components/settingsView/view.html" data-icon="settings"><span class="navigation-link-text" data-bind="text: strings.settingsView.title"></span></a></li>
             <li><a href="components/contactsView/view.html" data-icon="contacts"><span class="navigation-link-text" data-bind="text: strings.contactsView.title"></span></a></li>
+            <li><a href="components/myAccountView/view.html" data-icon="contacts"><span class="navigation-link-text" data-bind="text: strings.myAccountView.title"></span></a></li>
         </ul>
+    </div>
+    <div id="notify" class="notify-pop-up">
+        <span class="notify-pop-up__content"></span>
     </div>
     <!--  start index html save -->
     <!--  end index html save -->
@@ -56,6 +68,20 @@
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
 
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
+    <div id="locationEditor" class="locationEditor km-widget km-view" style="display: none;">
+        <header class="km-header">
+            <div class="km-navbar">
+                <div class="km-leftitem">
+                    <a class="km-widget km-button km-back" href="javascript:void(0)" onclick="app.locationEditOnSave()">
+                        <span class="km-text">Back</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="km-content km-stretched-view">
+            <div id="locationEditMap"></div>
+        </div>
+    </div>
 </body>
 
 </html>

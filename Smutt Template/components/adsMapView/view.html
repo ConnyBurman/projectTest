@@ -1,0 +1,40 @@
+<div data-role="view" data-stretch="true" data-hide="app.adsMapView.onHide" data-title="View" data-layout="main" data-model="app.adsMapView" data-show="app.adsMapView.onShow" data-after-show="app.adsMapView.afterShow" id="adsMapViewScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.adsMapView.title"></span>
+
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+
+
+    <!-- START_CUSTOM_CODE_adsMapView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_adsMapView -->
+    <div id="adsMapViewModelMap" class="map">
+
+
+    </div>
+
+    <div class="map-details details-content screen__content screen__content--details screen__content--map" data-bind="click: adsMapViewModel.itemClick, visible: adsMapViewModel.itemDetailsVisible">
+        <h3 data-bind="text: adsMapViewModel.originalItem.LocationStart"></h3>
+
+    </div>
+
+
+    <!-- START_CUSTOM_CODE_adsMapViewModel -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_adsMapViewModel -->
+    <script type="text/x-kendo-template" id="adsMapViewModelTemplate">
+        <div class="image-with-text ">
+            # data = app.adsMapView.adsMapViewModel.fixHierarchicalData(data); #
+
+            <h3><span class="#: data.icon() #"></span>#: data['LocationStart'] #</h3>
+
+        </div>
+    </script>
+</div>

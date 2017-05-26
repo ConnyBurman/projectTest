@@ -26,6 +26,18 @@
         });
     };
 
+    $(document).ready(function() {
+
+        app.notification = $("#notify");
+
+    });
+
+    app.showNotification = function(message, time) {
+        var autoHideAfter = time ? time : 3000;
+        app.notification.find('.notify-pop-up__content').html(message);
+        app.notification.fadeIn("slow").delay(autoHideAfter).fadeOut("slow");
+    };
+
     if (window.cordova) {
         document.addEventListener('deviceready', function() {
             if (navigator && navigator.splashscreen) {
@@ -80,7 +92,12 @@
     };
 
     /// start appjs functions
-    /// end appjs functions
+
+    app.locationEditOnSave = function() {
+            $("#locationEditor").hide();
+        }
+        /// end appjs functions
+
     app.showFileUploadName = function(itemViewName) {
         $('.' + itemViewName).off('change', 'input[type=\'file\']').on('change', 'input[type=\'file\']', function(event) {
             var target = $(event.target),
